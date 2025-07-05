@@ -1,4 +1,4 @@
-import { KimetsuModel } from "./kimetsuModel.js";
+import { KimetsuController } from "./kimetsuController.js";
 
-const kimetuChar = new KimetsuModel();
-console.log(kimetuChar.getCharacterInfo("all"));
+const kimetu = new KimetsuController();
+
