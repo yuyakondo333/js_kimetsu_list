@@ -15,12 +15,12 @@ export class KimetsuController {
   }
 
   setupEventListeners() {
-    const radioButtons = document.querySelectorAll('input[name="narrow-down"]');
+    const radioButtons = document.querySelectorAll('input[name="character-kind"]');
     
     radioButtons.forEach(radio => {
       radio.addEventListener('change', async (event) => {
         if (event.target.checked) {
-          await this.loadCharacters(event.target.id);
+          await this.loadCharacters(event.target.value);
         }
       });
     });
