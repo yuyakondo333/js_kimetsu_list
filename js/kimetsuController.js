@@ -19,8 +19,9 @@ export class KimetsuController {
     
     radioButtons.forEach(radio => {
       radio.addEventListener('change', async (event) => {
-        if (event.target.checked) {
-          await this.loadCharacters(event.target.value);
+        const { checked, value } = event.target;
+        if (checked) {
+          await this.loadCharacters(value);
         }
       });
     });
